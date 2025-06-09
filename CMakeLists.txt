@@ -1,6 +1,26 @@
 cmake_minimum_required(VERSION 3.18.1)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=hidden -Wl,--exclude-libs,ALL")
 
+
+
+
+
+set(CMAKE_SYSTEM_NAME ANDROID) 
+set(CMAKE_ANDROID_NDK D:/ndkollvm/android-ndk-r25c.Ollvm/android-ndk-r25c)
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_ANDROID_NDK}/build/cmake/android.toolchain.cmake)
+
+set(CMAKE_ANDROID_ARCH_ABI arm64-v8a)
+set(ANDROID_ABI arm64-v8a)
+set(ANDROID_PLATFORM android-26)
+set(ANDROID_NDK ${CMAKE_ANDROID_NDK})
+
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY   
+    ${CMAKE_SOURCE_DIR}/outputs/${CMAKE_ANDROID_ARCH_ABI}/
+) 
+
+set(CMAKE_CXX_STANDARD 17) 
+
+
 #------------------- BEGIN Library (Menu)  ------------------------#
 project("Menu")
 add_library(
@@ -26,9 +46,6 @@ add_library(
 
         Menu/ImGui/backends/imgui_impl_android.cpp
         Menu/ImGui/backends/imgui_impl_android.h
-        Menu/ImGui/backends/imgui_impl_opengl3.cpp
-        Menu/ImGui/backends/imgui_impl_opengl3.h
-        Menu/ImGui/backends/imgui_impl_opengl3_loader.h
         Menu/ImGui/backends/imgui_impl_vulkan.cpp
         Menu/ImGui/backends/imgui_impl_vulkan.h
 )
