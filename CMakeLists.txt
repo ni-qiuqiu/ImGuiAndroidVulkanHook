@@ -30,7 +30,8 @@ add_library(
         SHARED
 
         # Menu
-        Menu/Menu.cpp
+        Menu/seg.hpp
+        Menu/Menubyvkcreate.cpp
 
         # ImGui
         Menu/ImGui/imconfig.h

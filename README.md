@@ -1,4 +1,4 @@
-# WIP : ImGui Android Vulkan Hook
+## WIP : ImGui Android Vulkan Hook
 
 This project demonstrates an overlay implementation using ImGui with Vulkan for Android applications. It includes function hooks to inject a custom graphical menu and intercept touch events. Designed for educational and experimental purposes only.
 
@@ -6,20 +6,19 @@ This project demonstrates an overlay implementation using ImGui with Vulkan for 
 
 > This project adapt to ue4(which use vulkan)
 
-- [ ]  Fix touch event handling for mod menu.
-- [ ]  Fix screen rotation for imgui.
-- [ ]  Fix a series of problems caused by using `Home`.
+* [X]  Fix touch event handling for mod menu.
+  > *touch event have a little problem for scale*
+  
+* [X]  Fix a series of problems caused by using `Home`.
+* [ ]  Fix screen rotation `preTransform` for imgui.
 
 ## Test
 
 ![images](./test/image.png)
 
-## Features
+## Documentation
+`Menubyvkcreate.cpp` specialized for games loaded `libVulkan.so` fast that data could not be captured
 
-- Vulkan-based rendering for ImGui overlays.
-- Hooking Vulkan functions (`vkQueueSubmit`, `vkCreateSwapchainKHR`,`vkQueuePresentKHR`) to integrate ImGui.
-- Customizable mod menu example with touch event handling.
-- Android Native Window support.
 
 ## Requirements
 
@@ -28,4 +27,3 @@ This project demonstrates an overlay implementation using ImGui with Vulkan for 
 - External libraries:
   - [ImGui v1.95.x](https://github.com/ocornut/imgui)
   - [Dobby Hooking Library](https://github.com/jmpews/Dobby)
-  - Vulkan SDK
