@@ -10,7 +10,7 @@ This project demonstrates an overlay implementation using ImGui with Vulkan for 
   > *touch event have a little problem for scale*
   
 * [X]  Fix a series of problems caused by using `Home`.
-* [ ]  Fix screen rotation `preTransform` for imgui.
+* [X]  Fix screen rotation `preTransform` for imgui.
 
 ## Test
 
